@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora_AlejandroGrijalva.MainPage"
+             BackgroundColor="#22252d"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,.32" AbsoluteLayout.LayoutFlags="All" 
+                         HorizontalOptions="End" VerticalOptions="End" Padding="24,0" Spacing="0">
+                <Label HorizontalOptions="End" Padding="8,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span x:Name="Operacion" FontSize="36" TextColor="#fff"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label x:Name="Respuesta" HorizontalOptions="End" TextColor="#fff" Margin="0,0,16,0" FontSize="50" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <Frame AbsoluteLayout.LayoutBounds="0,1,1,0.1" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional" BackgroundColor="#2a2d37"/>
+            <Frame AbsoluteLayout.LayoutBounds="0,.95,1,0.62" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional" BackgroundColor="#2a2d37" HasShadow="False" CornerRadius="45">
+                <Grid AbsoluteLayout.LayoutBounds="0,1,1,0.62" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional" 
+                      RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*,*,*" Padding="10" RowSpacing="4" ColumnSpacing="4">
+
+                    <Frame Grid.Column="2" Grid.Row="0" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="⬅" BackgroundColor="#282b33" CommandParameter="C" Clicked="Quitar"/>
+                    </Frame>
+                    <Frame Grid.Column="0" Grid.Row="0" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33" Grid.ColumnSpan="2">
+                        <Button TextColor="#d86d6f" FontSize="28" VerticalOptions="Fill" Text="C" BackgroundColor="#282b33" CommandParameter="Q" Clicked="Borrar"/>
+                    </Frame>
+                    <Frame Grid.Column="3" Grid.Row="0" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#37ae9a" FontSize="28" VerticalOptions="Fill" Text="÷" BackgroundColor="#282b33" CommandParameter="/" Clicked="Operador"/>
+                    </Frame>
+
+                    <Frame Grid.Column="0" Grid.Row="1" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="7" BackgroundColor="#282b33" CommandParameter="7" Clicked="Precionar"/>
+                    </Frame>
+                    <Frame Grid.Column="1" Grid.Row="1" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="8" BackgroundColor="#282b33" CommandParameter="8" Clicked="Precionar"/>
+                    </Frame>
+                    <Frame Grid.Column="2" Grid.Row="1" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="9" BackgroundColor="#282b33" CommandParameter="9" Clicked="Precionar"/>
+                    </Frame>
+                    <Frame Grid.Column="3" Grid.Row="1" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#37ae9a" FontSize="28" VerticalOptions="Fill" Text="x" BackgroundColor="#282b33" CommandParameter="X" Clicked="Operador"/>
+                    </Frame>
+
+                    <Frame Grid.Column="0" Grid.Row="2" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="4" BackgroundColor="#282b33" CommandParameter="4" Clicked="Precionar"/>
+                    </Frame>
+                    <Frame Grid.Column="1" Grid.Row="2" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="5" BackgroundColor="#282b33" CommandParameter="5" Clicked="Precionar"/>
+                    </Frame>
+                    <Frame Grid.Column="2" Grid.Row="2" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="6" BackgroundColor="#282b33" CommandParameter="6" Clicked="Precionar"/>
+                    </Frame>
+                    <Frame Grid.Column="3" Grid.Row="2" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#37ae9a" FontSize="28" VerticalOptions="Fill" Text="-" BackgroundColor="#282b33" CommandParameter="-" Clicked="Operador"/>
+                    </Frame>
+
+                    <Frame Grid.Column="0" Grid.Row="3" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="1" BackgroundColor="#282b33" CommandParameter="1" Clicked="Precionar"/>
+                    </Frame>
+                    <Frame Grid.Column="1" Grid.Row="3" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="2" BackgroundColor="#282b33" CommandParameter="2" Clicked="Precionar"/>
+                    </Frame>
+                    <Frame Grid.Column="2" Grid.Row="3" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="3" BackgroundColor="#282b33" CommandParameter="3" Clicked="Precionar"/>
+                    </Frame>
+                    <Frame Grid.Column="3" Grid.Row="3" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#37ae9a" FontSize="28" VerticalOptions="Fill" Text="+" BackgroundColor="#282b33" CommandParameter="+" Clicked="Operador"/>
+                    </Frame>
+
+                    <Frame Grid.Column="0" Grid.Row="4" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="28" VerticalOptions="Fill" Text="." BackgroundColor="#282b33" CommandParameter="." Clicked="Precionar_Punto"/>
+                    </Frame>
+                    <Frame Grid.Column="1" Grid.Row="4" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#282b33">
+                        <Button TextColor="#fff" FontSize="36" VerticalOptions="Fill" Text="0" BackgroundColor="#282b33" CommandParameter="0" Clicked="Precionar"/>
+                    </Frame>
+                    <Frame Grid.Column="2" Grid.Row="4" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="#d86d6f" Grid.ColumnSpan="2">
+                        <Button TextColor="#fff" FontSize="38" VerticalOptions="Fill" Text="=" BackgroundColor="#d86d6f" CommandParameter="=" Clicked="Responder3"/>
+                    </Frame>
+
+                </Grid>
+            </Frame>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
