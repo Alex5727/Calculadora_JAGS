@@ -201,7 +201,7 @@ namespace Calculadora_AlejandroGrijalva
                             }
                             listaOperadores.RemoveAt(segundo);
                         }
-                        else if (listaOperadores.Contains("/"))
+                        if (listaOperadores.Contains("/"))
                         {
                             int primer = listaOperadores.IndexOf("/");
                             int segundo = primer;
@@ -218,14 +218,12 @@ namespace Calculadora_AlejandroGrijalva
                                 {
                                     Resultado = Resultado / listaNumeros[0];
                                     listaNumeros.RemoveAt(0);
-
                                 }
                                 else
                                 {
-                                    double Resultadooo = listaNumeros[primer] * listaNumeros[segundo];
+                                    double Resultadooo = listaNumeros[primer] / listaNumeros[segundo];
                                     listaNumeros.RemoveAt(primer);
                                     listaNumeros[primer] = Resultadooo;
-
                                 }
                             }
                             listaOperadores.RemoveAt(segundo);
